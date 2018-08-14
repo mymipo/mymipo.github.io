@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mymipo.github.io/"/>
-  <updated>2018-08-14T09:43:15.313Z</updated>
+  <updated>2018-08-14T14:03:24.079Z</updated>
   <id>https://mymipo.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>react-ssr</title>
-    <link href="https://mymipo.github.io/default/cjktkliyr00009jzh9cs813vn.html"/>
-    <id>https://mymipo.github.io/default/cjktkliyr00009jzh9cs813vn.html</id>
-    <published>2018-08-14T09:37:40.000Z</published>
-    <updated>2018-08-14T09:43:15.313Z</updated>
+    <title>Dva+React同构(SSR)实践记录</title>
+    <link href="https://mymipo.github.io/default/cjkts4g7z0000gpzh80xa0vlc.html"/>
+    <id>https://mymipo.github.io/default/cjkts4g7z0000gpzh80xa0vlc.html</id>
+    <published>2018-08-13T16:00:00.000Z</published>
+    <updated>2018-08-14T14:03:24.079Z</updated>
     
     <summary type="html">
     
@@ -29,14 +29,15 @@
       
         
         
-          &lt;hr&gt;
-&lt;p&gt;title: Dva+React同构(SSR)实践记录&lt;br&gt;date: 2018-08-14&lt;/p&gt;
-&lt;h2 id=&quot;tags-react-dva-ssr-同构&quot;&gt;&lt;a href=&quot;#tags-react-dva-ssr-同构&quot;
+          &lt;p&gt;项目使用了dva+roadhog+antd-mobile搭建，因为使用客户端渲染首屏白屏的时间太长，为了提升项目的首屏加载速度提高用户体验，在现在的基础上加入了SSR，实现过程中踩了不少坑，所以记录下，希望给有缘看到这篇文章的小伙伴一点帮助…&lt;/p&gt;
+&lt;p&gt;#实现原理&lt;br
         
       
     
     </summary>
     
+    
+      <category term="react dva ssr 同构" scheme="https://mymipo.github.io/tags/react-dva-ssr-%E5%90%8C%E6%9E%84/"/>
     
   </entry>
   
