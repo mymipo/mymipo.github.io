@@ -7,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="橡树">
 
-    <title>归档: 2018/8 - 橡树的空想盒子</title>
+    <title>Text - 橡树的空想盒子</title>
     <meta name="description" content="">
 
     <meta name="keywords"
@@ -99,71 +99,58 @@
             </a>
         </div>
 
-<div id="archive_container">
+<div class="row stream-container">
+    <div class="card-container">
 
-</div>
+        <div class="card card-item clear-border card-top-patch card-clear-hover">
+            
+            <div style="background-image: url('/default/cjktsy1cf0001sczhxngqi5d8.html../images/react_ssr.jpeg')"
+                 class="card-image card-radius clear-border clear-bottom-border-radius card-image-bigger"></div>
+            
 
-<nav class="pagination pagination-flex outside-padding-patch" role="pagination">
+            <div class="card-item-container clear-flex-xs">
+                <div class="card-inner-cell">
+                    <h2>Text</h2>
+
+                    <div>
+                        <p>
+                            <time datetime="2018-08-13T16:00:00.000Z" itemprop="datePublished">
+                                2018-08-14 00:00
+                            </time>
+                            
+
+                            
+                            
+                            <span class="oi" data-glyph="tag" style="vertical-align: middle; margin-left: 5px"> </span>&nbsp;
+                            
+                            <a href='/tags/react-dva-ssr-同构/'>react dva ssr 同构</a>
+                            
+                            
+                            
+                        </p>
+                    </div>
+
+
+                    <p class=" post-block-desc">
+                        <p>的路口附近离开就立刻就立刻就了就离开就立刻就立刻就的法律框架第三方离开就看了电视剧弗兰克打扫房间了肯定是分类考试等级分类可视对讲分类考试等级分类看到设计分类考试等级分类卡萨丁减肥凉快圣诞节饭来看电视剧发了可视对讲发辽阔的设计费了电视剧发了可视对讲发了可视对讲分类考试等级分类可视对讲放开了时代峻峰离开圣诞节疯狂老师的解放路速度快放假</p>
+
+                    </p>
+
+                    <nav class="pagination" role="pagination">
     
-    <a class="older-posts pagination-flex-right"></a>
+    <a class="newer-posts" href="/default/cjktsy1ca0000sczhffcu069t.html">
+        上一篇: Dva+React同构(SSR)实践记录
+    </a>
     
-    <span class="page-number pagination-flex-center">
-                        第 1/1 页
-                    </span>
-    
-    <a class="older-posts pagination-flex-right"></a>
+    <span class="page-number"></span>
     
 </nav>
 
-<div id="__pending_post_item_container" style="display:none">
-    
-    
-    <div>
-    <h3 class="section-title">
-        <a href="08">
-            2018/08
-        </a>
-    </h3>
-    
-
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/default/cjktsy1ca0000sczhffcu069t.html" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">Dva+React同构(SSR)实践记录</h4>
-
-                        <p class=" post-block-desc clear-margin">
-                            08-14
-                        </p>
-                    </div>
+                    
                 </div>
-            </a>
+            </div>
         </div>
     </div>
-
-    
-    
-
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/default/cjktsy1cf0001sczhxngqi5d8.html" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">Text</h4>
-
-                        <p class=" post-block-desc clear-margin">
-                            08-14
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    
-    </div>
-
 </div>
 
 <footer>
@@ -198,71 +185,8 @@
 
 
 <script>
-    let archiveYearlyNodes;
-    let leftContainer;
-    let rightContainer;
-    let archiveContainer;
-    let lastColumnCount;
-    let loadingIndicator;
-
     $(document).ready(function () {
-        loadingIndicator = $("#global-loading-indicator");
-
-        lastColumnCount = -1;
-        leftContainer = $('#stream_inner_left');
-        rightContainer = $('#stream_inner_right');
-        archiveContainer = $('#archive_container');
-
-        function reLayoutPosts() {
-            // suppress unnecessary re-layouts
-            let columnCount = window.innerWidth < 768 ? 1 : 2;
-            if (columnCount === lastColumnCount)return;
-            loadingIndicator.show();
-            lastColumnCount = columnCount;
-            archiveContainer.empty();
-            rightContainer.empty();
-            archiveYearlyNodes = $("#__pending_post_item_container").find("> div");
-            for (let i = 0; i < archiveYearlyNodes.length; i++) {
-                let leftHeight = 0;
-                let rightHeight = 0;
-
-                let yearly = $(archiveYearlyNodes[i]).clone();
-                let yearTitle = yearly.children()[0];
-                let yearContainer = $(document.createElement('div'));
-                let yearContainerInner = $(document.createElement('div'));
-                let yearContainerInnerL = $(document.createElement('div'));
-                let yearContainerInnerR = $(document.createElement('div'));
-                yearContainerInner.addClass("row stream-container");
-                yearContainerInnerL.addClass("col-lg-6 col-md-6 col-no-h-padding");
-                yearContainerInnerR.addClass("col-lg-6 col-md-6 col-no-h-padding");
-
-                yearContainerInner.append(yearContainerInnerL).append(yearContainerInnerR);
-                yearContainer.append(yearTitle).append(yearContainerInner);
-                archiveContainer.append(yearContainer);
-
-                let postEntries = yearly.find("> .card-container");
-                for (let j = 0; j < postEntries.length; j++) {
-                    let post = $(postEntries[j]);
-                    if (columnCount === 1 || leftHeight <= rightHeight) {
-                        console.log("Left, +" + post.height());
-                        yearContainerInnerL.append(post);
-                        leftHeight += post.height();
-                    } else {
-                        console.log("Right, +" + post.height());
-                        yearContainerInnerR.append(post);
-                        rightHeight += post.height();
-                    }
-                }
-
-            }
-            loadingIndicator.fadeOut(600);
-        }
-
-        $(window).resize(function () {
-            reLayoutPosts();
-        });
-
-        reLayoutPosts();
+        $("#global-loading-indicator").fadeOut(600);
     });
 </script>
 
