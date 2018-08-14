@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mymipo.github.io/"/>
-  <updated>2018-08-06T06:17:00.506Z</updated>
+  <updated>2018-08-14T07:13:42.485Z</updated>
   <id>https://mymipo.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>My first post</title>
-    <link href="https://mymipo.github.io/default/cjkhwbnht0000dzzhrl46rt90.html"/>
-    <id>https://mymipo.github.io/default/cjkhwbnht0000dzzhrl46rt90.html</id>
-    <published>2018-08-02T16:00:00.000Z</published>
-    <updated>2018-08-06T06:17:00.506Z</updated>
+    <title>Dva+React同构(SSR)采坑记录</title>
+    <link href="https://mymipo.github.io/default/cjktdfci5000041zhcprvrock.html"/>
+    <id>https://mymipo.github.io/default/cjktdfci5000041zhcprvrock.html</id>
+    <published>2018-08-13T16:00:00.000Z</published>
+    <updated>2018-08-14T07:13:42.485Z</updated>
     
     <content type="html"><![CDATA[<p>这个是我的第一篇博文ddd</p>]]></content>
     
@@ -36,7 +36,7 @@
     </summary>
     
     
-      <category term="react ssr 同构" scheme="https://mymipo.github.io/tags/react-ssr-%E5%90%8C%E6%9E%84/"/>
+      <category term="react, dva, ssr, 同构" scheme="https://mymipo.github.io/tags/react-dva-ssr-%E5%90%8C%E6%9E%84/"/>
     
   </entry>
   
