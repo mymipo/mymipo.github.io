@@ -45,7 +45,7 @@ body {
 }
 
 .page-head {
-    padding: 100px 15px;
+    padding: 100px 15px 56px;
     -webkit-transition: padding 0.5s ease-in-out, margin 0.5s ease-in-out;
     -moz-transition: padding 0.5s ease-in-out, margin 0.5s ease-in-out;
     -ms-transition: padding 0.5s ease-in-out, margin 0.5s ease-in-out;
@@ -251,13 +251,26 @@ a {
     width: 100%;
 }
 
+.card-title {
+    color: #000000;
+}
+
+.card-date {
+    padding-top: 4px;
+}
+
+.card-date span {
+    color: #888888;
+}
+
 .card-image {
     width: 100%;
-    height: 240px;
+    height: 160px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    position: relative;
 }
 
 .card-image:after {
@@ -265,7 +278,7 @@ a {
     content: '\A';
     position: absolute;
     width: 100%;
-    height: 240px;
+    height: 160px;
     top: 0;
     left: 0;
     opacity: .15;
@@ -525,4 +538,31 @@ footer > p {
         border-right: none;
         padding-right: 20px;
     }
+}
+
+figure {
+  padding: 1em;
+  margin: .5em 0;
+  background: #f6f8fa;
+  border-radius: 4px;
+}
+
+figure > table {
+  width: 100%;
+}
+
+pre * {
+  font-family: Monaco, Menlo, "Source Code Pro", monospace; }
+
+figure .gutter pre {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: none;
+  text-align: right;
+  min-width: 3em;
+  display: none;
+}
+
+figure .code {
+  width: 99%;
 }

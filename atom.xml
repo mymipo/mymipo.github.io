@@ -3,10 +3,10 @@
   <title>橡树的空想盒子</title>
   
   <subtitle>脑洞很大，可能会写很多东西也可能不会</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="//atom.xml" rel="self"/>
   
   <link href="https://mymipo.github.io/"/>
-  <updated>2018-08-14T14:16:13.272Z</updated>
+  <updated>2018-08-15T03:17:24.832Z</updated>
   <id>https://mymipo.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Dva+React同构(SSR)实践记录</title>
-    <link href="https://mymipo.github.io/default/cjktsy1ca0000sczhffcu069t.html"/>
-    <id>https://mymipo.github.io/default/cjktsy1ca0000sczhffcu069t.html</id>
+    <link href="https://mymipo.github.io/web/cjkukoieg0000pxzhgigkr86q.html"/>
+    <id>https://mymipo.github.io/web/cjkukoieg0000pxzhgigkr86q.html</id>
     <published>2018-08-13T16:00:00.000Z</published>
-    <updated>2018-08-14T14:16:13.272Z</updated>
+    <updated>2018-08-15T03:17:24.832Z</updated>
     
     <summary type="html">
     
@@ -30,38 +30,14 @@
         
         
           &lt;p&gt;项目使用了dva+roadhog+antd-mobile搭建，因为使用客户端渲染首屏白屏的时间太长，为了提升项目的首屏加载速度提高用户体验，在现在的基础上加入了SSR，实现过程中踩了不少坑，所以记录下，希望给有缘看到这篇文章的小伙伴一点帮助…&lt;/p&gt;
-&lt;p&gt;#实现原理&lt;br
+&lt;h3
         
       
     
     </summary>
     
     
-      <category term="react dva ssr 同构" scheme="https://mymipo.github.io/tags/react-dva-ssr-%E5%90%8C%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Text</title>
-    <link href="https://mymipo.github.io/default/cjktsy1cf0001sczhxngqi5d8.html"/>
-    <id>https://mymipo.github.io/default/cjktsy1cf0001sczhxngqi5d8.html</id>
-    <published>2018-08-13T16:00:00.000Z</published>
-    <updated>2018-08-14T14:28:12.654Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;的路口附近离开就立刻就立刻就了就离开就立刻就立刻就的法律框架第三方离开就看了电视剧弗兰克打扫房间了肯定是分类考试等级分类可视对讲分类考试等级分类看到设计分类考试等级分类卡萨丁减肥凉快圣诞节饭来看电视剧发了可视对讲发辽阔的设计费了电视剧发了可视对讲发了可视对讲分类考试等级分类
-        
-      
-    
-    </summary>
-    
-    
-      <category term="react dva ssr 同构" scheme="https://mymipo.github.io/tags/react-dva-ssr-%E5%90%8C%E6%9E%84/"/>
+      <category term="react , dva , ssr , 同构" scheme="https://mymipo.github.io/tags/react-dva-ssr-%E5%90%8C%E6%9E%84/"/>
     
   </entry>
   
