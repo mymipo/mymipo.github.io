@@ -7,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="橡树">
 
-    <title>归档: 2018 - 橡树的空想盒子</title>
+    <title>标签: dva - 橡树的空想盒子</title>
     <meta name="description" content="">
 
     <meta name="keywords"
@@ -99,8 +99,15 @@
             </a>
         </div>
 
-<div id="archive_container">
+<h3 class="section-title">标签: dva</h3>
 
+<div class="row stream-container">
+    <div id="stream_inner_left" class="col-lg-6 col-md-6 col-no-h-padding">
+
+    </div>
+    <div id="stream_inner_right" class="col-lg-6 col-md-6 col-no-h-padding">
+
+    </div>
 </div>
 
 <nav class="pagination pagination-flex outside-padding-patch" role="pagination">
@@ -108,8 +115,8 @@
     <a class="older-posts pagination-flex-right"></a>
     
     <span class="page-number pagination-flex-center">
-        第 1/1 页
-    </span>
+                        第 1/1 页
+                    </span>
     
     <a class="older-posts pagination-flex-right"></a>
     
@@ -117,34 +124,23 @@
 
 <div id="__pending_post_item_container" style="display:none">
     
-    
-    <div>
-    <h3 class="section-title">
-        <a href="08">
-            2018/08
-        </a>
-    </h3>
-    
-
     <div class="card-container">
         <div class="card card-item clear-border card-top-patch">
             <a class="a-block" href="/web/cjkussbk30000iazhmjvo86dd.html" rel="noopener noreferrer">
+                
+                <div style="background-image: url('/web/cjkussbk30000iazhmjvo86dd.html/images/react_ssr.jpeg')"
+                     class="card-image card-radius clear-border clear-bottom-border-radius"></div>
+                
                 <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">Dva+React同构(SSR)实践记录</h4>
-
-                        <p class=" post-block-desc clear-margin">
-                            08-14
-                        </p>
-                    </div>
+                    <div class="card-inner-cell"><h4 class="clear-margin">Dva+React同构(SSR)实践记录</h4>
+                        
+                        <p class="clear-margin post-block-desc">项目使用了dva roadhog antd-mobile搭建，为了优化纯客户端渲染带来的首屏加载时间过长，提升项目的首屏加载速度提高用户体验，在现有的基础上加入了SSR，实现过程中踩了不少坑，所以记录下，希望给有缘看到这篇文章的小伙伴一点帮助…
+实现原理用户第一次访问或者刷新当前</p></div>
                 </div>
             </a>
         </div>
     </div>
-
     
-    </div>
-
 </div>
 
 <footer>
@@ -179,10 +175,9 @@
 
 
 <script>
-    let archiveYearlyNodes;
+    let cachedPostsNodes;
     let leftContainer;
     let rightContainer;
-    let archiveContainer;
     let lastColumnCount;
     let loadingIndicator;
 
@@ -192,7 +187,6 @@
         lastColumnCount = -1;
         leftContainer = $('#stream_inner_left');
         rightContainer = $('#stream_inner_right');
-        archiveContainer = $('#archive_container');
 
         function reLayoutPosts() {
             // suppress unnecessary re-layouts
@@ -200,41 +194,20 @@
             if (columnCount === lastColumnCount)return;
             loadingIndicator.show();
             lastColumnCount = columnCount;
-            archiveContainer.empty();
+            let leftHeight = 0;
+            let rightHeight = 0;
+            leftContainer.empty();
             rightContainer.empty();
-            archiveYearlyNodes = $("#__pending_post_item_container").find("> div");
-            for (let i = 0; i < archiveYearlyNodes.length; i++) {
-                let leftHeight = 0;
-                let rightHeight = 0;
-
-                let yearly = $(archiveYearlyNodes[i]).clone();
-                let yearTitle = yearly.children()[0];
-                let yearContainer = $(document.createElement('div'));
-                let yearContainerInner = $(document.createElement('div'));
-                let yearContainerInnerL = $(document.createElement('div'));
-                let yearContainerInnerR = $(document.createElement('div'));
-                yearContainerInner.addClass("row stream-container");
-                yearContainerInnerL.addClass("col-lg-6 col-md-6 col-no-h-padding");
-                yearContainerInnerR.addClass("col-lg-6 col-md-6 col-no-h-padding");
-
-                yearContainerInner.append(yearContainerInnerL).append(yearContainerInnerR);
-                yearContainer.append(yearTitle).append(yearContainerInner);
-                archiveContainer.append(yearContainer);
-
-                let postEntries = yearly.find("> .card-container");
-                for (let j = 0; j < postEntries.length; j++) {
-                    let post = $(postEntries[j]);
-                    if (columnCount === 1 || leftHeight <= rightHeight) {
-                        console.log("Left, +" + post.height());
-                        yearContainerInnerL.append(post);
-                        leftHeight += post.height();
-                    } else {
-                        console.log("Right, +" + post.height());
-                        yearContainerInnerR.append(post);
-                        rightHeight += post.height();
-                    }
+            cachedPostsNodes = $("#__pending_post_item_container").find("> .card-container");
+            for (let i = 0; i < cachedPostsNodes.length; i++) {
+                let post = $(cachedPostsNodes[i]).clone();
+                if (columnCount === 1 || leftHeight <= rightHeight) {
+                    leftContainer.append(post);
+                    leftHeight += post.height();
+                } else {
+                    rightContainer.append(post);
+                    rightHeight += post.height();
                 }
-
             }
             loadingIndicator.fadeOut(600);
         }
