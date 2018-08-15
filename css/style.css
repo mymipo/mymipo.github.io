@@ -273,22 +273,6 @@ a {
     position: relative;
 }
 
-.card-image:after {
-    border-radius: .2rem .2rem 0 0 !important;
-    content: '\A';
-    position: absolute;
-    width: 100%;
-    height: 160px;
-    top: 0;
-    left: 0;
-    opacity: .15;
-    background: url("../images/texture_stripe_inv.png") repeat;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    overflow: hidden;
-}
-
 .card-image-bigger {
     height: 280px !important;
 }
