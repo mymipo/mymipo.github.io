@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://mymipo.github.io/"/>
-  <updated>2018-08-15T03:17:24.832Z</updated>
+  <updated>2018-08-15T06:14:04.955Z</updated>
   <id>https://mymipo.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Dva+React同构(SSR)实践记录</title>
-    <link href="https://mymipo.github.io/web/cjkuojdkn00008mzhnded823t.html"/>
-    <id>https://mymipo.github.io/web/cjkuojdkn00008mzhnded823t.html</id>
+    <link href="https://mymipo.github.io/web/cjkuqqigw0000z9zhzzqni9qt.html"/>
+    <id>https://mymipo.github.io/web/cjkuqqigw0000z9zhzzqni9qt.html</id>
     <published>2018-08-13T16:00:00.000Z</published>
-    <updated>2018-08-15T03:17:24.832Z</updated>
+    <updated>2018-08-15T06:14:04.955Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;p&gt;项目使用了dva+roadhog+antd-mobile搭建，因为使用客户端渲染首屏白屏的时间太长，为了提升项目的首屏加载速度提高用户体验，在现在的基础上加入了SSR，实现过程中踩了不少坑，所以记录下，希望给有缘看到这篇文章的小伙伴一点帮助…&lt;/p&gt;
+          &lt;p&gt;项目使用了dva roadhog antd-mobile搭建，为了优化纯客户端渲染带来的首屏加载时间过长，提升项目的首屏加载速度提高用户体验，在现有的基础上加入了SSR，实现过程中踩了不少坑，所以记录下，希望给有缘看到这篇文章的小伙伴一点帮助…&lt;/p&gt;
 &lt;h3
         
       
