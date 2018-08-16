@@ -7,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="橡树">
 
-    <title>标签: react - 橡树的空想盒子</title>
+    <title>pws笔录 - 橡树的空想盒子</title>
     <meta name="description" content="">
 
     <meta name="keywords"
@@ -99,48 +99,47 @@
             </a>
         </div>
 
-<h3 class="section-title">标签: react</h3>
-
 <div class="row stream-container">
-    <div id="stream_inner_left" class="col-lg-6 col-md-6 col-no-h-padding">
+    <div class="card-container">
 
-    </div>
-    <div id="stream_inner_right" class="col-lg-6 col-md-6 col-no-h-padding">
+        <div class="card card-item clear-border card-top-patch card-clear-hover">
+            
 
-    </div>
-</div>
+            <div class="card-item-container clear-flex-xs">
+                <div class="card-inner-cell">
+                    <h2>pws笔录</h2>
 
-<nav class="pagination pagination-flex outside-padding-patch" role="pagination">
+                    <div>
+                        <p>
+                            <time datetime="2018-08-16T02:58:44.000Z" itemprop="datePublished">
+                                2018-08-16 10:58
+                            </time>
+                            
+
+                            
+                        </p>
+                    </div>
+
+
+                    <p class=" post-block-desc">
+                        
+                    </p>
+
+                    <nav class="pagination" role="pagination">
     
-    <a class="older-posts pagination-flex-right"></a>
+    <span class="page-number"></span>
     
-    <span class="page-number pagination-flex-center">
-                        第 1/1 页
-                    </span>
-    
-    <a class="older-posts pagination-flex-right"></a>
+    <a class="older-posts" href="/web/cjkw6qh1b0001lczhneehocz7.html">
+        下一篇: Dva+React同构(SSR)实践记录
+    </a>
     
 </nav>
 
-<div id="__pending_post_item_container" style="display:none">
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/web/cjkw6qh1b0001lczhneehocz7.html" rel="noopener noreferrer">
-                
-                <div style="background-image: url('/web/cjkw6qh1b0001lczhneehocz7.html/images/react-ssr.png')"
-                     class="card-image card-radius clear-border clear-bottom-border-radius"></div>
-                
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell"><h4 class="clear-margin">Dva+React同构(SSR)实践记录</h4>
-                        
-                        <p class="clear-margin post-block-desc">项目使用了dva roadhog antd-mobile搭建，为了优化纯客户端渲染带来的首屏加载时间过长，提升项目的首屏加载速度提高用户体验，在现有的基础上加入了SSR，实现过程中踩了不少坑，所以记录下，希望给有缘看到这篇文章的小伙伴一点帮助…
-实现原理用户第一次访问或者刷新当前</p></div>
+                    
                 </div>
-            </a>
+            </div>
         </div>
     </div>
-    
 </div>
 
 <footer>
@@ -175,48 +174,8 @@
 
 
 <script>
-    let cachedPostsNodes;
-    let leftContainer;
-    let rightContainer;
-    let lastColumnCount;
-    let loadingIndicator;
-
     $(document).ready(function () {
-        loadingIndicator = $("#global-loading-indicator");
-
-        lastColumnCount = -1;
-        leftContainer = $('#stream_inner_left');
-        rightContainer = $('#stream_inner_right');
-
-        function reLayoutPosts() {
-            // suppress unnecessary re-layouts
-            let columnCount = window.innerWidth < 768 ? 1 : 2;
-            if (columnCount === lastColumnCount)return;
-            loadingIndicator.show();
-            lastColumnCount = columnCount;
-            let leftHeight = 0;
-            let rightHeight = 0;
-            leftContainer.empty();
-            rightContainer.empty();
-            cachedPostsNodes = $("#__pending_post_item_container").find("> .card-container");
-            for (let i = 0; i < cachedPostsNodes.length; i++) {
-                let post = $(cachedPostsNodes[i]).clone();
-                if (columnCount === 1 || leftHeight <= rightHeight) {
-                    leftContainer.append(post);
-                    leftHeight += post.height();
-                } else {
-                    rightContainer.append(post);
-                    rightHeight += post.height();
-                }
-            }
-            loadingIndicator.fadeOut(600);
-        }
-
-        $(window).resize(function () {
-            reLayoutPosts();
-        });
-
-        reLayoutPosts();
+        $("#global-loading-indicator").fadeOut(600);
     });
 </script>
 
