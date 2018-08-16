@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://mymipo.github.io/"/>
-  <updated>2018-08-16T02:58:44.882Z</updated>
+  <updated>2018-08-16T06:29:44.074Z</updated>
   <id>https://mymipo.github.io/</id>
   
   <author>
@@ -17,23 +17,9 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>pws笔录</title>
-    <link href="https://mymipo.github.io/web/cjkw6qh150000lczhde6naiyb.html"/>
-    <id>https://mymipo.github.io/web/cjkw6qh150000lczhde6naiyb.html</id>
-    <published>2018-08-16T02:58:44.000Z</published>
-    <updated>2018-08-16T02:58:44.882Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Dva+React同构(SSR)实践记录</title>
-    <link href="https://mymipo.github.io/web/cjkw6qh1b0001lczhneehocz7.html"/>
-    <id>https://mymipo.github.io/web/cjkw6qh1b0001lczhneehocz7.html</id>
+    <link href="https://mymipo.github.io/web/cjkw6sxzr0000mvzhfhq5qfqy.html"/>
+    <id>https://mymipo.github.io/web/cjkw6sxzr0000mvzhfhq5qfqy.html</id>
     <published>2018-08-13T16:00:00.000Z</published>
     <updated>2018-08-16T06:29:44.074Z</updated>
     
