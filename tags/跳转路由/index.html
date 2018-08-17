@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="橡树">
 
-    <title>橡树的空想盒子</title>
+    <title>标签: 跳转路由 - 橡树的空想盒子</title>
     <meta name="description" content="">
 
     <meta name="keywords"
@@ -98,15 +99,17 @@
             </a>
         </div>
 
+<h3 class="section-title">标签: 跳转路由</h3>
+
 <div class="row stream-container">
-    <div id="stream_inner_left" class="col-lg-12 col-md-12 col-no-h-padding">
+    <div id="stream_inner_left" class="col-lg-6 col-md-6 col-no-h-padding">
 
     </div>
-    <div id="stream_inner_right" class="col-lg-12 col-md-12 col-no-h-padding">
+    <div id="stream_inner_right" class="col-lg-6 col-md-6 col-no-h-padding">
 
     </div>
 </div>
-<!--
+
 <nav class="pagination pagination-flex outside-padding-patch" role="pagination">
     
     <a class="older-posts pagination-flex-right"></a>
@@ -118,10 +121,8 @@
     <a class="older-posts pagination-flex-right"></a>
     
 </nav>
--->
-<div id="__pending_post_item_container" style="display:none">
-    
 
+<div id="__pending_post_item_container" style="display:none">
     
     <div class="card-container">
         <div class="card card-item clear-border card-top-patch">
@@ -129,51 +130,15 @@
                 
                 <div class="card-item-container clear-flex-xs">
                     <div class="card-inner-cell"><h4 class="clear-margin">关于React刷新页面/跳转路由用户确认弹窗</h4>
-                        <p class="clear-margin post-block-desc">当项目某个页面是一个表单类型的页面，当用户进入这个页面想到刷新关闭页面或者...
-                        </p>
-                    </div>
+                        
+                        <p class="clear-margin post-block-desc">当项目某个页面是一个表单类型的页面，当用户进入这个页面想到刷新关闭页面或者跳转路由的时候，我们想要有个友好的弹窗提示让用户二次确认，在React中应该如何实现呢，请看下文。
+刷新/关闭页面刷新或者关闭页面我们可以使用原生的beforeunload事件来监听，在用户刷新或者关闭窗口</p></div>
                 </div>
-                
             </a>
         </div>
     </div>
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/web/2018/08/14.html" rel="noopener noreferrer">
-                
-                <div class="row">
-                    <div class="col-md-4 order-md-last">
-                         <!-- config.root + item.path + item.featured_image -->
-                        <div style="background-image: url('/images/react-ssr.png')" class="card-image card-radius clear-border clear-bottom-border-radius"></div>
-                    </div>
-                    <div class="col-md-8 order-md-first" style="display: flex;">
-                        <div class="card-item-container clear-flex-xs">
-                            <div class="card-inner-cell">
-                                <h4 class="clear-margin card-title">
-                                    Dva+React同构(SSR)实践记录
-                                </h4>
-                                <p class="clear-margin post-block-desc">
-                                    项目使用了dva roadhog antd-mobile搭建，为了优化纯客...
-                                </p>
-                                <p class="clear-margin card-date">
-                                    <span style="vertical-align: inherit;">
-                                        2018-08-14
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </a>
-        </div>
-    </div>
-    
-
     
 </div>
-
 
 <footer>
     <p>
@@ -230,8 +195,7 @@
             let rightHeight = 0;
             leftContainer.empty();
             rightContainer.empty();
-            let dock = $("#__pending_post_item_container");
-            cachedPostsNodes = dock.find("> .card-container");
+            cachedPostsNodes = $("#__pending_post_item_container").find("> .card-container");
             for (let i = 0; i < cachedPostsNodes.length; i++) {
                 let post = $(cachedPostsNodes[i]).clone();
                 if (columnCount === 1 || leftHeight <= rightHeight) {
@@ -243,7 +207,6 @@
                 }
             }
             loadingIndicator.fadeOut(600);
-            dock.hide();
         }
 
         $(window).resize(function () {

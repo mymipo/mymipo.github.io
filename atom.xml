@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://mymipo.github.io/"/>
-  <updated>2018-08-16T06:29:44.074Z</updated>
+  <updated>2018-08-17T05:50:58.603Z</updated>
   <id>https://mymipo.github.io/</id>
   
   <author>
@@ -17,9 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于React刷新页面/跳转路由用户确认弹窗</title>
+    <link href="https://mymipo.github.io/web/2018/08/17.html"/>
+    <id>https://mymipo.github.io/web/2018/08/17.html</id>
+    <published>2018-08-17T02:32:36.000Z</published>
+    <updated>2018-08-17T05:50:58.603Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;当项目某个页面是一个表单类型的页面，当用户进入这个页面想到刷新关闭页面或者跳转路由的时候，我们想要有个友好的弹窗提示让用户二次确认，在React中应该如何实现呢，请看下文。&lt;/p&gt;
+&lt;h3 id=&quot;刷新-关闭页面&quot;&gt;&lt;a href=&quot;#刷新-关闭页面&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="react" scheme="https://mymipo.github.io/tags/react/"/>
+    
+      <category term="跳转路由" scheme="https://mymipo.github.io/tags/%E8%B7%B3%E8%BD%AC%E8%B7%AF%E7%94%B1/"/>
+    
+      <category term="弹窗" scheme="https://mymipo.github.io/tags/%E5%BC%B9%E7%AA%97/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Dva+React同构(SSR)实践记录</title>
-    <link href="https://mymipo.github.io/web/14.html"/>
-    <id>https://mymipo.github.io/web/14.html</id>
+    <link href="https://mymipo.github.io/web/2018/08/14.html"/>
+    <id>https://mymipo.github.io/web/2018/08/14.html</id>
     <published>2018-08-13T16:00:00.000Z</published>
     <updated>2018-08-16T06:29:44.074Z</updated>
     
