@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://mymipo.github.io/"/>
-  <updated>2018-08-17T05:50:58.603Z</updated>
+  <updated>2018-08-17T05:54:40.057Z</updated>
   <id>https://mymipo.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://mymipo.github.io/web/2018/08/17.html"/>
     <id>https://mymipo.github.io/web/2018/08/17.html</id>
     <published>2018-08-17T02:32:36.000Z</published>
-    <updated>2018-08-17T05:50:58.603Z</updated>
+    <updated>2018-08-17T05:54:40.057Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;p&gt;当项目某个页面是一个表单类型的页面，当用户进入这个页面想到刷新关闭页面或者跳转路由的时候，我们想要有个友好的弹窗提示让用户二次确认，在React中应该如何实现呢，请看下文。&lt;/p&gt;
+          &lt;p&gt;当项目某个页面是一个表单类型的页面，当用户进入这个页面想要刷新关闭页面或者跳转路由的时候，我们想要有个友好的弹窗提示让用户二次确认的话，可以通过以下的方式实现。&lt;/p&gt;
 &lt;h3 id=&quot;刷新-关闭页面&quot;&gt;&lt;a href=&quot;#刷新-关闭页面&quot;
         
       
