@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://mymipo.github.io/"/>
-  <updated>2018-08-17T09:50:18.082Z</updated>
+  <updated>2018-10-23T10:21:35.266Z</updated>
   <id>https://mymipo.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于浏览器缓存机制小笔记</title>
+    <link href="https://mymipo.github.io/web/2018/10/23.html"/>
+    <id>https://mymipo.github.io/web/2018/10/23.html</id>
+    <published>2018-10-23T11:32:36.000Z</published>
+    <updated>2018-10-23T10:21:35.266Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;重新温习了一遍关于浏览器缓存机制，做个小小的笔记，方便以后可以随时翻笔记。&lt;/p&gt;
+&lt;h3 id=&quot;请求过程&quot;&gt;&lt;a href=&quot;#请求过程&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="http" scheme="https://mymipo.github.io/tags/http/"/>
+    
+      <category term="浏览器缓存" scheme="https://mymipo.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/"/>
+    
+  </entry>
   
   <entry>
     <title>关于React刷新页面/跳转路由用户确认弹窗</title>

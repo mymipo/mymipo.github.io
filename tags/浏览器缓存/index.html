@@ -7,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="橡树">
 
-    <title>归档 - 橡树的空想盒子</title>
+    <title>标签: 浏览器缓存 - 橡树的空想盒子</title>
     <meta name="description" content="">
 
     <meta name="keywords"
@@ -99,8 +99,15 @@
             </a>
         </div>
 
-<div id="archive_container">
+<h3 class="section-title">标签: 浏览器缓存</h3>
 
+<div class="row stream-container">
+    <div id="stream_inner_left" class="col-lg-6 col-md-6 col-no-h-padding">
+
+    </div>
+    <div id="stream_inner_right" class="col-lg-6 col-md-6 col-no-h-padding">
+
+    </div>
 </div>
 
 <nav class="pagination pagination-flex outside-padding-patch" role="pagination">
@@ -108,8 +115,8 @@
     <a class="older-posts pagination-flex-right"></a>
     
     <span class="page-number pagination-flex-center">
-        第 1/1 页
-    </span>
+                        第 1/1 页
+                    </span>
     
     <a class="older-posts pagination-flex-right"></a>
     
@@ -117,72 +124,24 @@
 
 <div id="__pending_post_item_container" style="display:none">
     
-    
-    <div>
-    <h3 class="section-title">
-        <a href="2018">
-            2018
-        </a>
-    </h3>
-    
-
     <div class="card-container">
         <div class="card card-item clear-border card-top-patch">
             <a class="a-block" href="/web/2018/10/23.html" rel="noopener noreferrer">
+                
+                <div style="background-image: url('/web/2018/10/23.html/images/timg.jepg')"
+                     class="card-image card-radius clear-border clear-bottom-border-radius"></div>
+                
                 <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">关于浏览器缓存机制小笔记</h4>
-
-                        <p class=" post-block-desc clear-margin">
-                            10-23
-                        </p>
-                    </div>
+                    <div class="card-inner-cell"><h4 class="clear-margin">关于浏览器缓存机制小笔记</h4>
+                        
+                        <p class="clear-margin post-block-desc">重新温习了一遍关于浏览器缓存机制，做个小小的笔记，方便以后可以随时翻笔记。
+请求过程
+1.浏览器发起请求，首先在浏览器缓存中查找该请求的结果及缓存标识；2.如果有缓存标识，则直接读取缓存文件；如果无缓存，则像服务器发起http请求；3.服务端返回请求结果及缓存规则；4.将请求结果</p></div>
                 </div>
             </a>
         </div>
     </div>
-
     
-    
-
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/web/2018/08/17.html" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">关于React刷新页面/跳转路由用户确认弹窗</h4>
-
-                        <p class=" post-block-desc clear-margin">
-                            08-17
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    
-    
-
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/web/2018/08/14.html" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">Dva+React同构(SSR)实践记录</h4>
-
-                        <p class=" post-block-desc clear-margin">
-                            08-14
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    
-    </div>
-
 </div>
 
 <footer>
@@ -217,10 +176,9 @@
 
 
 <script>
-    let archiveYearlyNodes;
+    let cachedPostsNodes;
     let leftContainer;
     let rightContainer;
-    let archiveContainer;
     let lastColumnCount;
     let loadingIndicator;
 
@@ -230,7 +188,6 @@
         lastColumnCount = -1;
         leftContainer = $('#stream_inner_left');
         rightContainer = $('#stream_inner_right');
-        archiveContainer = $('#archive_container');
 
         function reLayoutPosts() {
             // suppress unnecessary re-layouts
@@ -238,41 +195,20 @@
             if (columnCount === lastColumnCount)return;
             loadingIndicator.show();
             lastColumnCount = columnCount;
-            archiveContainer.empty();
+            let leftHeight = 0;
+            let rightHeight = 0;
+            leftContainer.empty();
             rightContainer.empty();
-            archiveYearlyNodes = $("#__pending_post_item_container").find("> div");
-            for (let i = 0; i < archiveYearlyNodes.length; i++) {
-                let leftHeight = 0;
-                let rightHeight = 0;
-
-                let yearly = $(archiveYearlyNodes[i]).clone();
-                let yearTitle = yearly.children()[0];
-                let yearContainer = $(document.createElement('div'));
-                let yearContainerInner = $(document.createElement('div'));
-                let yearContainerInnerL = $(document.createElement('div'));
-                let yearContainerInnerR = $(document.createElement('div'));
-                yearContainerInner.addClass("row stream-container");
-                yearContainerInnerL.addClass("col-lg-6 col-md-6 col-no-h-padding");
-                yearContainerInnerR.addClass("col-lg-6 col-md-6 col-no-h-padding");
-
-                yearContainerInner.append(yearContainerInnerL).append(yearContainerInnerR);
-                yearContainer.append(yearTitle).append(yearContainerInner);
-                archiveContainer.append(yearContainer);
-
-                let postEntries = yearly.find("> .card-container");
-                for (let j = 0; j < postEntries.length; j++) {
-                    let post = $(postEntries[j]);
-                    if (columnCount === 1 || leftHeight <= rightHeight) {
-                        console.log("Left, +" + post.height());
-                        yearContainerInnerL.append(post);
-                        leftHeight += post.height();
-                    } else {
-                        console.log("Right, +" + post.height());
-                        yearContainerInnerR.append(post);
-                        rightHeight += post.height();
-                    }
+            cachedPostsNodes = $("#__pending_post_item_container").find("> .card-container");
+            for (let i = 0; i < cachedPostsNodes.length; i++) {
+                let post = $(cachedPostsNodes[i]).clone();
+                if (columnCount === 1 || leftHeight <= rightHeight) {
+                    leftContainer.append(post);
+                    leftHeight += post.height();
+                } else {
+                    rightContainer.append(post);
+                    rightHeight += post.height();
                 }
-
             }
             loadingIndicator.fadeOut(600);
         }
