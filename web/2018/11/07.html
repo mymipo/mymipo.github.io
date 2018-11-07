@@ -7,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="橡树">
 
-    <title>标签: 线程 进程 - 橡树的空想盒子</title>
+    <title>线程和进程小结 - 橡树的空想盒子</title>
     <meta name="description" content="">
 
     <meta name="keywords"
@@ -99,47 +99,59 @@
             </a>
         </div>
 
-<h3 class="section-title">标签: 线程 进程</h3>
-
 <div class="row stream-container">
-    <div id="stream_inner_left" class="col-lg-6 col-md-6 col-no-h-padding">
+    <div class="card-container">
 
-    </div>
-    <div id="stream_inner_right" class="col-lg-6 col-md-6 col-no-h-padding">
+        <div class="card card-item clear-border card-top-patch card-clear-hover">
+            
+            <div style="background-image: url('/images/process.png')"
+                 class="card-image card-radius clear-border clear-bottom-border-radius card-image-bigger"></div>
+            
 
-    </div>
-</div>
+            <div class="card-item-container clear-flex-xs">
+                <div class="card-inner-cell">
+                    <h2>线程和进程小结</h2>
 
-<nav class="pagination pagination-flex outside-padding-patch" role="pagination">
+                    <div>
+                        <p>
+                            <time datetime="2018-11-07T11:00:36.000Z" itemprop="datePublished">
+                                2018-11-07 19:00
+                            </time>
+                            
+
+                            
+                            
+                            <span class="oi" data-glyph="tag" style="vertical-align: middle; margin-left: 5px"> </span>&nbsp;
+                            
+                            <a href='/tags/线程-进程/'>线程 进程</a>
+                            
+                            
+                            
+                        </p>
+                    </div>
+
+
+                    <p class=" post-block-desc">
+                        <h3 id="关于进程和线程"><a href="#关于进程和线程" class="headerlink" title="关于进程和线程"></a>关于进程和线程</h3><p>进程是分配资源的基本单位，线程是执行的基本单位，对于操作系统来说，一个任务就是一个进程(Process)，比如打开一个浏览器，打开一个记事本，就启动了一个进程。<br>一个进程内，比如记事本可以进行打字，拼音检查，打印等，在一个进程的内部，可以同时干很多事，就需要运行多个子任务，我们把这些子任务称为线程(Thread)。由于每个进程至少要干一件事，所以，一个进程至少有一个线程，多个线程可以同时并行的执行，且每个进程的内存空间是里面的每个线程共享的。但是每个内存空间的大小不一，比如说有些内存只能容纳一个线程执行，所以当有线程执行时，其他线程必须等待此线程执行结束后才能使用这块内存。<br>CPU总是只执行一个进程，其他进程处于非运行的状态，多线程的执行方式和多进程是一样的，也是由操作系统在多个线程之间快速切换，让每个线程都短暂地交替运行，看起来就像同时执行一样。当然，真正地同时执行多线程需要多核CPU才可能实现。</p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p>线程是最小的执行单元，而进程由至少一个线程组成。如何调度进程和线程，完全由操作系统决定，程序自己不能决定什么时候执行，执行多长时间。<br><a href="http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html" target="_blank" rel="noopener"></a><br><a href="https://www.zhihu.com/question/25532384" target="_blank" rel="noopener"></a></p>
+
+                    </p>
+
+                    <nav class="pagination" role="pagination">
     
-    <a class="older-posts pagination-flex-right"></a>
+    <span class="page-number"></span>
     
-    <span class="page-number pagination-flex-center">
-                        第 1/1 页
-                    </span>
-    
-    <a class="older-posts pagination-flex-right"></a>
+    <a class="older-posts" href="/web/2018/10/23.html">
+        下一篇: 关于浏览器缓存机制小笔记
+    </a>
     
 </nav>
 
-<div id="__pending_post_item_container" style="display:none">
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/web/2018/11/07.html" rel="noopener noreferrer">
-                
-                <div style="background-image: url('/web/2018/11/07.html/images/process.png')"
-                     class="card-image card-radius clear-border clear-bottom-border-radius"></div>
-                
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell"><h4 class="clear-margin">线程和进程小结</h4>
-                        
-                        <p class="clear-margin post-block-desc">关于进程和线程进程是分配资源的基本单位，线程是执行的基本单位，对于操作系统来说，一个任务就是一个进程(Process)，比如打开一个浏览器，打开一个记事本，就启动了一个进程。一个进程内，比如记事本可以进行打字，拼音检查，打印等，在一个进程的内部，可以同时干很多事，就需要运行多个子</p></div>
+                    
                 </div>
-            </a>
+            </div>
         </div>
     </div>
-    
 </div>
 
 <footer>
@@ -174,48 +186,8 @@
 
 
 <script>
-    let cachedPostsNodes;
-    let leftContainer;
-    let rightContainer;
-    let lastColumnCount;
-    let loadingIndicator;
-
     $(document).ready(function () {
-        loadingIndicator = $("#global-loading-indicator");
-
-        lastColumnCount = -1;
-        leftContainer = $('#stream_inner_left');
-        rightContainer = $('#stream_inner_right');
-
-        function reLayoutPosts() {
-            // suppress unnecessary re-layouts
-            let columnCount = window.innerWidth < 768 ? 1 : 2;
-            if (columnCount === lastColumnCount)return;
-            loadingIndicator.show();
-            lastColumnCount = columnCount;
-            let leftHeight = 0;
-            let rightHeight = 0;
-            leftContainer.empty();
-            rightContainer.empty();
-            cachedPostsNodes = $("#__pending_post_item_container").find("> .card-container");
-            for (let i = 0; i < cachedPostsNodes.length; i++) {
-                let post = $(cachedPostsNodes[i]).clone();
-                if (columnCount === 1 || leftHeight <= rightHeight) {
-                    leftContainer.append(post);
-                    leftHeight += post.height();
-                } else {
-                    rightContainer.append(post);
-                    rightHeight += post.height();
-                }
-            }
-            loadingIndicator.fadeOut(600);
-        }
-
-        $(window).resize(function () {
-            reLayoutPosts();
-        });
-
-        reLayoutPosts();
+        $("#global-loading-indicator").fadeOut(600);
     });
 </script>
 

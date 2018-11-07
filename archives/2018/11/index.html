@@ -7,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="橡树">
 
-    <title>标签: 线程 进程 - 橡树的空想盒子</title>
+    <title>归档: 2018/11 - 橡树的空想盒子</title>
     <meta name="description" content="">
 
     <meta name="keywords"
@@ -99,15 +99,8 @@
             </a>
         </div>
 
-<h3 class="section-title">标签: 线程 进程</h3>
+<div id="archive_container">
 
-<div class="row stream-container">
-    <div id="stream_inner_left" class="col-lg-6 col-md-6 col-no-h-padding">
-
-    </div>
-    <div id="stream_inner_right" class="col-lg-6 col-md-6 col-no-h-padding">
-
-    </div>
 </div>
 
 <nav class="pagination pagination-flex outside-padding-patch" role="pagination">
@@ -115,8 +108,8 @@
     <a class="older-posts pagination-flex-right"></a>
     
     <span class="page-number pagination-flex-center">
-                        第 1/1 页
-                    </span>
+        第 1/1 页
+    </span>
     
     <a class="older-posts pagination-flex-right"></a>
     
@@ -124,22 +117,34 @@
 
 <div id="__pending_post_item_container" style="display:none">
     
+    
+    <div>
+    <h3 class="section-title">
+        <a href="11">
+            2018/11
+        </a>
+    </h3>
+    
+
     <div class="card-container">
         <div class="card card-item clear-border card-top-patch">
             <a class="a-block" href="/web/2018/11/07.html" rel="noopener noreferrer">
-                
-                <div style="background-image: url('/web/2018/11/07.html/images/process.png')"
-                     class="card-image card-radius clear-border clear-bottom-border-radius"></div>
-                
                 <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell"><h4 class="clear-margin">线程和进程小结</h4>
-                        
-                        <p class="clear-margin post-block-desc">关于进程和线程进程是分配资源的基本单位，线程是执行的基本单位，对于操作系统来说，一个任务就是一个进程(Process)，比如打开一个浏览器，打开一个记事本，就启动了一个进程。一个进程内，比如记事本可以进行打字，拼音检查，打印等，在一个进程的内部，可以同时干很多事，就需要运行多个子</p></div>
+                    <div class="card-inner-cell">
+                        <h4 class="clear-margin">线程和进程小结</h4>
+
+                        <p class=" post-block-desc clear-margin">
+                            11-07
+                        </p>
+                    </div>
                 </div>
             </a>
         </div>
     </div>
+
     
+    </div>
+
 </div>
 
 <footer>
@@ -174,9 +179,10 @@
 
 
 <script>
-    let cachedPostsNodes;
+    let archiveYearlyNodes;
     let leftContainer;
     let rightContainer;
+    let archiveContainer;
     let lastColumnCount;
     let loadingIndicator;
 
@@ -186,6 +192,7 @@
         lastColumnCount = -1;
         leftContainer = $('#stream_inner_left');
         rightContainer = $('#stream_inner_right');
+        archiveContainer = $('#archive_container');
 
         function reLayoutPosts() {
             // suppress unnecessary re-layouts
@@ -193,20 +200,41 @@
             if (columnCount === lastColumnCount)return;
             loadingIndicator.show();
             lastColumnCount = columnCount;
-            let leftHeight = 0;
-            let rightHeight = 0;
-            leftContainer.empty();
+            archiveContainer.empty();
             rightContainer.empty();
-            cachedPostsNodes = $("#__pending_post_item_container").find("> .card-container");
-            for (let i = 0; i < cachedPostsNodes.length; i++) {
-                let post = $(cachedPostsNodes[i]).clone();
-                if (columnCount === 1 || leftHeight <= rightHeight) {
-                    leftContainer.append(post);
-                    leftHeight += post.height();
-                } else {
-                    rightContainer.append(post);
-                    rightHeight += post.height();
+            archiveYearlyNodes = $("#__pending_post_item_container").find("> div");
+            for (let i = 0; i < archiveYearlyNodes.length; i++) {
+                let leftHeight = 0;
+                let rightHeight = 0;
+
+                let yearly = $(archiveYearlyNodes[i]).clone();
+                let yearTitle = yearly.children()[0];
+                let yearContainer = $(document.createElement('div'));
+                let yearContainerInner = $(document.createElement('div'));
+                let yearContainerInnerL = $(document.createElement('div'));
+                let yearContainerInnerR = $(document.createElement('div'));
+                yearContainerInner.addClass("row stream-container");
+                yearContainerInnerL.addClass("col-lg-6 col-md-6 col-no-h-padding");
+                yearContainerInnerR.addClass("col-lg-6 col-md-6 col-no-h-padding");
+
+                yearContainerInner.append(yearContainerInnerL).append(yearContainerInnerR);
+                yearContainer.append(yearTitle).append(yearContainerInner);
+                archiveContainer.append(yearContainer);
+
+                let postEntries = yearly.find("> .card-container");
+                for (let j = 0; j < postEntries.length; j++) {
+                    let post = $(postEntries[j]);
+                    if (columnCount === 1 || leftHeight <= rightHeight) {
+                        console.log("Left, +" + post.height());
+                        yearContainerInnerL.append(post);
+                        leftHeight += post.height();
+                    } else {
+                        console.log("Right, +" + post.height());
+                        yearContainerInnerR.append(post);
+                        rightHeight += post.height();
+                    }
                 }
+
             }
             loadingIndicator.fadeOut(600);
         }
