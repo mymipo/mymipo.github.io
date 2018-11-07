@@ -7,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="橡树">
 
-    <title>标签 - 橡树的空想盒子</title>
+    <title>标签: 线程 进程 - 橡树的空想盒子</title>
     <meta name="description" content="">
 
     <meta name="keywords"
@@ -99,6 +99,8 @@
             </a>
         </div>
 
+<h3 class="section-title">标签: 线程 进程</h3>
+
 <div class="row stream-container">
     <div id="stream_inner_left" class="col-lg-6 col-md-6 col-no-h-padding">
 
@@ -120,112 +122,19 @@
     
 </nav>
 
-
-<div id="__pending_tag_item_container" style="display:none">
+<div id="__pending_post_item_container" style="display:none">
     
     <div class="card-container">
         <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/tags/react/" rel="noopener noreferrer">
+            <a class="a-block" href="/web/2018/10/23.html" rel="noopener noreferrer">
+                
+                <div style="background-image: url('/web/2018/10/23.html/images/process.png')"
+                     class="card-image card-radius clear-border clear-bottom-border-radius"></div>
+                
                 <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">react</h4>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/tags/dva/" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">dva</h4>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/tags/ssr/" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">ssr</h4>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/tags/同构/" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">同构</h4>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/tags/线程-进程/" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">线程 进程</h4>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/tags/http/" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">http</h4>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/tags/浏览器缓存/" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">浏览器缓存</h4>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/tags/跳转路由/" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">跳转路由</h4>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/tags/弹窗/" rel="noopener noreferrer">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">弹窗</h4>
-                    </div>
+                    <div class="card-inner-cell"><h4 class="clear-margin">线程和进程小结</h4>
+                        
+                        <p class="clear-margin post-block-desc">关于进程和线程进程是分配资源的基本单位，线程是执行的基本单位，对于操作系统来说，一个任务就是一个进程(Process)，比如打开一个浏览器，打开一个记事本，就启动了一个进程。一个进程内，比如记事本可以进行打字，拼音检查，打印等，在一个进程的内部，可以同时干很多事，就需要运行多个子</p></div>
                 </div>
             </a>
         </div>
@@ -265,7 +174,7 @@
 
 
 <script>
-    let cachedTagsNodes;
+    let cachedPostsNodes;
     let leftContainer;
     let rightContainer;
     let lastColumnCount;
@@ -278,7 +187,7 @@
         leftContainer = $('#stream_inner_left');
         rightContainer = $('#stream_inner_right');
 
-        function reLayoutItems() {
+        function reLayoutPosts() {
             // suppress unnecessary re-layouts
             let columnCount = window.innerWidth < 768 ? 1 : 2;
             if (columnCount === lastColumnCount)return;
@@ -288,25 +197,25 @@
             let rightHeight = 0;
             leftContainer.empty();
             rightContainer.empty();
-            cachedTagsNodes = $("#__pending_tag_item_container").find("> .card-container");
-            for (let i = 0; i < cachedTagsNodes.length; i++) {
-                let item = $(cachedTagsNodes[i]).clone();
+            cachedPostsNodes = $("#__pending_post_item_container").find("> .card-container");
+            for (let i = 0; i < cachedPostsNodes.length; i++) {
+                let post = $(cachedPostsNodes[i]).clone();
                 if (columnCount === 1 || leftHeight <= rightHeight) {
-                    leftContainer.append(item);
-                    leftHeight += item.height();
+                    leftContainer.append(post);
+                    leftHeight += post.height();
                 } else {
-                    rightContainer.append(item);
-                    rightHeight += item.height();
+                    rightContainer.append(post);
+                    rightHeight += post.height();
                 }
             }
             loadingIndicator.fadeOut(600);
         }
 
         $(window).resize(function () {
-            reLayoutItems();
+            reLayoutPosts();
         });
 
-        reLayoutItems();
+        reLayoutPosts();
     });
 </script>
 
