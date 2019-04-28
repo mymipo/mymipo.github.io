@@ -7,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="橡树">
 
-    <title>标签: npm npm包管理 npm包版本 - 橡树的空想盒子</title>
+    <title>关于npm包版本管理的认识 - 橡树的空想盒子</title>
     <meta name="description" content="">
 
     <meta name="keywords"
@@ -99,47 +99,69 @@
             </a>
         </div>
 
-<h3 class="section-title">标签: npm npm包管理 npm包版本</h3>
-
 <div class="row stream-container">
-    <div id="stream_inner_left" class="col-lg-6 col-md-6 col-no-h-padding">
+    <div class="card-container">
 
-    </div>
-    <div id="stream_inner_right" class="col-lg-6 col-md-6 col-no-h-padding">
+        <div class="card card-item clear-border card-top-patch card-clear-hover">
+            
+            <div style="background-image: url('/images/timg1.png')"
+                 class="card-image card-radius clear-border clear-bottom-border-radius card-image-bigger"></div>
+            
 
-    </div>
-</div>
+            <div class="card-item-container clear-flex-xs">
+                <div class="card-inner-cell">
+                    <h2>关于npm包版本管理的认识</h2>
 
-<nav class="pagination pagination-flex outside-padding-patch" role="pagination">
+                    <div>
+                        <p>
+                            <time datetime="2019-04-28T03:00:36.000Z" itemprop="datePublished">
+                                2019-04-28 11:00
+                            </time>
+                            
+
+                            
+                            
+                            <span class="oi" data-glyph="tag" style="vertical-align: middle; margin-left: 5px"> </span>&nbsp;
+                            
+                            <a href='/tags/npm-npm包管理-npm包版本/'>npm npm包管理 npm包版本</a>
+                            
+                            
+                            
+                        </p>
+                    </div>
+
+
+                    <p class=" post-block-desc">
+                        <h3 id="关于包管理掉坑记录"><a href="#关于包管理掉坑记录" class="headerlink" title="关于包管理掉坑记录"></a>关于包管理掉坑记录</h3><p>一切的深入引发思考都是缘由掉坑的血的教训引起的。一个CRM后台系统用了element UI，并且在项目中对form表单进行了二次封装以便使用，但是在一次重新打包交于QA的时候，QA大佬提出突然全部表单输入的时候显示undefined并且无法输入内容，但是其他同事没问题此问题，后面经过排查，原来在于升级了element UI导致之前封装组件方法失效了，因为对npm包管理不到位，决定深入了解npm包管理问题。</p>
+<h3 id="npm包符号认知"><a href="#npm包符号认知" class="headerlink" title="npm包符号认知"></a>npm包符号认知</h3><ul>
+<li>version: 直接具体某个版本；</li>
+<li>>version: 大于某个版本；例如：&gt;1.1.2，表示必须大于1.1.2版；(还有&gt;=, &lt;, &lt;=)；</li>
+<li>^version: 匹配到某个版本号的最高版本； 例如：^1.1.2 ，表示&gt;=1.1.2 &lt;2.0.0；^0.2.3 ，表示&gt;=0.2.3 &lt;0.3.0；^0.0，表示&gt;=0.0.0 &lt;0.1.0；</li>
+<li>~version: 大概匹配到某个版本；例如：~1.1.2，表示&gt;=1.1.2 &lt;1.2.0；~1.1，表示&gt;=1.1.0 &lt;1.2.0；<br>可以使用npm ls 包名称 来查看所安装包的版本；</li>
+</ul>
+<h3 id="解决依赖包所引发的问题"><a href="#解决依赖包所引发的问题" class="headerlink" title="解决依赖包所引发的问题"></a>解决依赖包所引发的问题</h3><ol>
+<li>直接去掉^等前缀，直接锁定包版本来管理；(这样需要官方包更新后需要手动维护更新)；</li>
+<li>使用package-lock.json或者yarn-lock.json等对版本号进行锁定管理，提交版本管理，这样可以保证团队成员所用的包版本一致；(当需要更新版本的时候package-lock.json会同步更新)；</li>
+</ol>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p>对于依赖包的锁定版本可以解决很多场景下带来的问题，当然也要注意<strong>某个包更新版本后连带的依赖包版本兼容问题</strong>；<br><a href="https://www.jianshu.com/p/1d2e2f8c9ab2" target="_blank" rel="noopener"></a></p>
+
+                    </p>
+
+                    <nav class="pagination" role="pagination">
     
-    <a class="older-posts pagination-flex-right"></a>
+    <span class="page-number"></span>
     
-    <span class="page-number pagination-flex-center">
-                        第 1/1 页
-                    </span>
-    
-    <a class="older-posts pagination-flex-right"></a>
+    <a class="older-posts" href="/web/2018/11/07.html">
+        下一篇: 线程和进程笔录
+    </a>
     
 </nav>
 
-<div id="__pending_post_item_container" style="display:none">
-    
-    <div class="card-container">
-        <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/web/2019/04/28.html" rel="noopener noreferrer">
-                
-                <div style="background-image: url('/web/2019/04/28.html/images/timg1.png')"
-                     class="card-image card-radius clear-border clear-bottom-border-radius"></div>
-                
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell"><h4 class="clear-margin">关于npm包版本管理的认识</h4>
-                        
-                        <p class="clear-margin post-block-desc">关于包管理掉坑记录一切的深入引发思考都是缘由掉坑的血的教训引起的。一个CRM后台系统用了element UI，并且在项目中对form表单进行了二次封装以便使用，但是在一次重新打包交于QA的时候，QA大佬提出突然全部表单输入的时候显示undefined并且无法输入内容，但是其他同事</p></div>
+                    
                 </div>
-            </a>
+            </div>
         </div>
     </div>
-    
 </div>
 
 <footer>
@@ -174,48 +196,8 @@
 
 
 <script>
-    let cachedPostsNodes;
-    let leftContainer;
-    let rightContainer;
-    let lastColumnCount;
-    let loadingIndicator;
-
     $(document).ready(function () {
-        loadingIndicator = $("#global-loading-indicator");
-
-        lastColumnCount = -1;
-        leftContainer = $('#stream_inner_left');
-        rightContainer = $('#stream_inner_right');
-
-        function reLayoutPosts() {
-            // suppress unnecessary re-layouts
-            let columnCount = window.innerWidth < 768 ? 1 : 2;
-            if (columnCount === lastColumnCount)return;
-            loadingIndicator.show();
-            lastColumnCount = columnCount;
-            let leftHeight = 0;
-            let rightHeight = 0;
-            leftContainer.empty();
-            rightContainer.empty();
-            cachedPostsNodes = $("#__pending_post_item_container").find("> .card-container");
-            for (let i = 0; i < cachedPostsNodes.length; i++) {
-                let post = $(cachedPostsNodes[i]).clone();
-                if (columnCount === 1 || leftHeight <= rightHeight) {
-                    leftContainer.append(post);
-                    leftHeight += post.height();
-                } else {
-                    rightContainer.append(post);
-                    rightHeight += post.height();
-                }
-            }
-            loadingIndicator.fadeOut(600);
-        }
-
-        $(window).resize(function () {
-            reLayoutPosts();
-        });
-
-        reLayoutPosts();
+        $("#global-loading-indicator").fadeOut(600);
     });
 </script>
 
