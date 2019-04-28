@@ -7,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="橡树">
 
-    <title>标签 - 橡树的空想盒子</title>
+    <title>标签: npm npm包管理 npm包版本 - 橡树的空想盒子</title>
     <meta name="description" content="">
 
     <meta name="keywords"
@@ -99,61 +99,46 @@
             </a>
         </div>
 
+<h3 class="section-title">标签: npm npm包管理 npm包版本</h3>
+
 <div class="row stream-container">
     <div id="stream_inner_left" class="col-lg-6 col-md-6 col-no-h-padding">
-        <div class="card-container">
-            <div class="card card-item clear-border card-top-patch">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell"><h4 class="clear-margin"></h4>
-                        <p class="clear-margin post-block-desc"></div>
-                </div>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card card-item clear-border card-top-patch">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell"><h4 class="clear-margin"></h4>
-                        <p class="clear-margin post-block-desc"></div>
-                </div>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card card-item clear-border card-top-patch">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell"><h4 class="clear-margin"></h4>
-                        <p class="clear-margin post-block-desc"></div>
-                </div>
-            </div>
-        </div>
+
     </div>
     <div id="stream_inner_right" class="col-lg-6 col-md-6 col-no-h-padding">
-        <div class="card-container">
-            <div class="card card-item clear-border card-top-patch">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell"><h4 class="clear-margin"></h4>
-                        <p class="clear-margin post-block-desc"></div>
-                </div>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card card-item clear-border card-top-patch">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell"><h4 class="clear-margin"></h4>
-                        <p class="clear-margin post-block-desc"></div>
-                </div>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card card-item clear-border card-top-patch">
-                <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell"><h4 class="clear-margin"></h4>
-                        <p class="clear-margin post-block-desc"></div>
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>
-<div id="__pending_category_item_container" style="display:none">
+
+<nav class="pagination pagination-flex outside-padding-patch" role="pagination">
+    
+    <a class="older-posts pagination-flex-right"></a>
+    
+    <span class="page-number pagination-flex-center">
+                        第 1/1 页
+                    </span>
+    
+    <a class="older-posts pagination-flex-right"></a>
+    
+</nav>
+
+<div id="__pending_post_item_container" style="display:none">
+    
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/web/2018/11/07.html" rel="noopener noreferrer">
+                
+                <div style="background-image: url('/web/2018/11/07.html/images/timg1.png')"
+                     class="card-image card-radius clear-border clear-bottom-border-radius"></div>
+                
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell"><h4 class="clear-margin">关于npm包版本管理的认识</h4>
+                        
+                        <p class="clear-margin post-block-desc">关于包管理掉坑记录一切的深入引发思考都是缘由掉坑的血的教训引起的。一个CRM后台系统用了element UI，并且在项目中对form表单进行了二次封装以便使用，但是在一次重新打包交于QA的时候，QA大佬提出突然全部表单输入的时候显示undefined并且无法输入内容，但是其他同事</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
     
 </div>
 
@@ -189,7 +174,7 @@
 
 
 <script>
-    let cachedCategoriesNodes;
+    let cachedPostsNodes;
     let leftContainer;
     let rightContainer;
     let lastColumnCount;
@@ -202,7 +187,7 @@
         leftContainer = $('#stream_inner_left');
         rightContainer = $('#stream_inner_right');
 
-        function reLayoutItems() {
+        function reLayoutPosts() {
             // suppress unnecessary re-layouts
             let columnCount = window.innerWidth < 768 ? 1 : 2;
             if (columnCount === lastColumnCount)return;
@@ -212,25 +197,25 @@
             let rightHeight = 0;
             leftContainer.empty();
             rightContainer.empty();
-            cachedCategoriesNodes = $("#__pending_category_item_container").find("> .card-container");
-            for (let i = 0; i < cachedCategoriesNodes.length; i++) {
-                let item = $(cachedCategoriesNodes[i]).clone();
+            cachedPostsNodes = $("#__pending_post_item_container").find("> .card-container");
+            for (let i = 0; i < cachedPostsNodes.length; i++) {
+                let post = $(cachedPostsNodes[i]).clone();
                 if (columnCount === 1 || leftHeight <= rightHeight) {
-                    leftContainer.append(item);
-                    leftHeight += item.height();
+                    leftContainer.append(post);
+                    leftHeight += post.height();
                 } else {
-                    rightContainer.append(item);
-                    rightHeight += item.height();
+                    rightContainer.append(post);
+                    rightHeight += post.height();
                 }
             }
             loadingIndicator.fadeOut(600);
         }
 
         $(window).resize(function () {
-            reLayoutItems();
+            reLayoutPosts();
         });
 
-        reLayoutItems();
+        reLayoutPosts();
     });
 </script>
 
